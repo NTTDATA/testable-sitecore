@@ -1,0 +1,13 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using MvcTestingDemo.Models
+
+@model IBlurbItem
+
+<h2>@Html.Sitecore().Field(Model.Headline.Id.ToString())</h2>
+<p>@Html.Sitecore().Field(Model.BlurbBody.Id.ToString())</p>
+<p>
+    @Html.Sitecore().BeginField(Model.Link.Id.ToString(), new { @class = "btn btn-default", role="button" })
+     »
+    @Html.Sitecore().EndField()
+</p>

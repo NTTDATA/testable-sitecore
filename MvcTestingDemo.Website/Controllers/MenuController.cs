@@ -1,9 +1,4 @@
 ﻿using MvcTestingDemo.Business;
-using MvcTestingDemo.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MvcTestingDemo.Controllers
@@ -12,6 +7,7 @@ namespace MvcTestingDemo.Controllers
     {
         private readonly IMenuLogic _menuLogic;
 
+        // Using constructor injection to keep components isolated
         public MenuController(IMenuLogic menuLogic)
         {
             _menuLogic = menuLogic;

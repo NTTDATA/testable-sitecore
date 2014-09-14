@@ -16,6 +16,7 @@ namespace MvcTestingDemo.Business
 
         public IEnumerable<MenuItemModel> GetMenuItems()
         {
+            // Using the context wrapper allows us to isolate ourselves from the Sitecore API
             var menuContainer = _context.Database.GetItem("/sitecore/Content/Home");       
             var home = menuContainer as INavigableItem;
 
@@ -36,9 +37,7 @@ namespace MvcTestingDemo.Business
 
             result.Children = item.Axes.GetChildren()
                 .OfType<INavigableItem>()
-                .Where(i => 
-                    i.IncludedInNavigation.Value
-                    )
+                .Where(i => i.IncludedInNavigation.Value)
                 .Select(c => GetMenuItem(c));
 
             return result;

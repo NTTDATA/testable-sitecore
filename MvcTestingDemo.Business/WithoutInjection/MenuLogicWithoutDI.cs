@@ -9,6 +9,7 @@ namespace MvcTestingDemo.Business.WithoutInjection
     {
         public IEnumerable<MenuItemModel> GetMenuItems()
         {
+            // Directly using the static context - NOT testable!
             var menuContainer = Sitecore.Context.Database.GetItem("/sitecore/Content/Home");
             var home = menuContainer.As<INavigableItem>();
 

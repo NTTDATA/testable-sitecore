@@ -3,13 +3,11 @@ testable-sitecore
 
 Highly testable code in Sitecore with MVC, Ninject, Synthesis, Moq, and NUnit
 
-### Prerequisites
-
+##### Prerequisites
 1. Sitecore 7.2
 2. Visual Studio 2013
 
-### Installation
-
+##### Installation
 1. Install and publish the Sitecore package MvcTestingDemoItems-1.00.zip to a clean throw-away Sitecore installation. 
 2. Configure the MvcTestingDemo.Website project to deploy to your website
 3. Modify App_Config/Include/Data.config to point to your /Data directory in Sitecore

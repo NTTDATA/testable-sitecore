@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc
+@using MvcTestingDemo.Models
+
+@model MenuItemModel
+
+@if(Model.HasChildren) 
+{
+    <li class="dropdown">
+        <a href="@Model.MenuItem.Url" class="dropdown-toggle" data-toggle="dropdown">
+            @Html.Sitecore().Field(Model.MenuItem.NavigationName.Id.ToString(), Model.MenuItem.InnerItem)
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+
+            @foreach (MenuItemModel child in Model.Children)
+            {
+                @Html.Partial("~/Views/Renderings/Navigation/MenuItem.cshtml", child)
+            }
+
+        </ul>       
+    </li> 
+} else
+{
+    <li><a href="@Model.MenuItem.Url">@Html.Sitecore().Field(Model.MenuItem.NavigationName.Id.ToString(), Model.MenuItem.InnerItem)</a></li>
+}
+

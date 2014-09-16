@@ -17,7 +17,7 @@ namespace MvcTestingDemo.Controllers
         public ActionResult Index()
         {
             var model = _menuLogic.GetMenuItems();
-            return View("~/Views/Sublayouts/Menu.cshtml", model);
+            return View("~/Views/Renderings/Navigation/Menu.cshtml", model);
         }
 	}
 }

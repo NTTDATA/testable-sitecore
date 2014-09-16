@@ -1,0 +1,13 @@
+﻿@using Sitecore.Mvc
+@using MvcTestingDemo.Models
+
+@model IEnumerable<MenuItemModel>
+
+<ul class="nav navbar-nav">
+    
+    @foreach (var menuItem in Model)
+    {
+        @Html.Partial("~/Views/Renderings/Navigation/MenuItem.cshtml", menuItem)
+    }
+
+</ul>

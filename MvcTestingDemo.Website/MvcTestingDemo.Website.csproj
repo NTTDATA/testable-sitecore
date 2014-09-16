@@ -128,10 +128,10 @@
     <Content Include="App_Config\Include\Synthesis.config" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\Layouts\Desktop.cshtml" />
-    <Content Include="Views\Sublayouts\Blurb.cshtml" />
+    <Content Include="Views\Renderings\Blurb.cshtml" />
     <Content Include="Web.config" />
-    <Content Include="Views\Sublayouts\Menu.cshtml" />
-    <Content Include="Views\Sublayouts\MenuItem.cshtml" />
+    <Content Include="Views\Renderings\Navigation\Menu.cshtml" />
+    <Content Include="Views\Renderings\Navigation\MenuItem.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
